@@ -9,9 +9,15 @@
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
 
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
     <!-- Estilo personalizado -->
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 <body>
 
@@ -19,12 +25,14 @@
         <h1 class="my-title">Luis Ramos <span>Back-end Developer</span></h1>
     </header>
 
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Sobre mí</a>
-        <a href="#">Clientes</a>
-        <a href="#">Contacto</a>
-    </nav>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">  
+            <a href="#">Inicio</a>
+            <a href="#">Sobre mí</a>
+            <a href="#">Clientes</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </div>
 
     <section class="ubicacion">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" /></svg>
@@ -62,20 +70,20 @@
             <fieldset>
                 <legend>Llena tus datos de contacto</legend>
                 <div>
-                    <label>Nombre completo</label>
-                    <input type="text" placeholder="Tu nombre">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre">
                 </div>
                 <div>
-                    <label>Teléfono</label>
-                    <input type="tel" placeholder="Tu número">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" placeholder="Tu número">
                 </div>
                 <div>
-                    <label>Email</label>
-                    <input type="email" placeholder="Tu correo electrónico">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Tu correo electrónico">
                 </div>
                 <div>
-                    <label>Mensaje</label>
-                    <textarea></textarea>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje"></textarea>
                 </div>
                 <div>
                     <input type="submit" value="Enviar">

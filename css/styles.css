@@ -12,6 +12,7 @@ html{
 
 body{
     font-size: 1.6rem;
+    font-family: 'Krub', sans-serif;
 }
 
 /* Tipografía */
@@ -63,6 +64,11 @@ h1, h2, h3 {
     margin-bottom: 1.5rem;
 }
 
+.ubicacion p {
+    color: var(--blanco);
+    margin: 0;
+}
+
 /* Estilo completo para el botón "Disponible" */
 .contenido-hero .boton {
     display: inline-block;
@@ -75,6 +81,7 @@ h1, h2, h3 {
     font-weight: bold;
     border-radius: 0.5rem;
     transition: background-color 0.3s ease;
+    border: none;
 }
 
 .contenido-hero .boton:hover {
@@ -96,11 +103,20 @@ h1, h2, h3 {
     background-color: var(--secundario);
 }
 
+/* Menú responsivo (Función faltante) */
 .navegacion-principal{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     font-weight: bold;
     font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+    }
 }
 
 .navegacion-principal a{
@@ -117,4 +133,92 @@ h1, h2, h3 {
 .contenedor{
     max-width: 120rem;
     margin: 0 auto;
+}
+
+/* Servicios */
+@media (min-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: bold;
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .icono {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;     
+}
+
+/* Contacto y Formulario Centrado */
+.contacto {
+    padding: 4rem 0;
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%); /* Corregido el espacio en min() */
+    margin: 0 auto;           /* Esto centra perfectamente el formulario */
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+/* Estilos básicos para alinear los inputs de tu HTML */
+.campos {
+    margin-bottom: 2rem;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+.formulario input[type="text"],
+.formulario input[type="tel"],
+.formulario input[type="email"],
+.formulario textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--blanco);
+}
+
+.formulario textarea {
+    height: 12rem;
+}
+
+.alinear-derecha {
+    display: flex;
+    justify-content: flex-end;
 }
